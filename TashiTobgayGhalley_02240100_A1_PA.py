@@ -58,11 +58,11 @@ def palindrome(text):
 # Word counter
 import requests
 
-def word(text_file_url):
+def word_count(text_file_url):
     response = requests.get(text_file_url)
     text = response.text.lower()
     wlist = ['the', 'was', 'and']
-    word_= {word: text.count(word) for word in wlist}
+    word= {word: text.count(word) for word in wlist}
     return word
 
 # Menu and main program flow
@@ -73,7 +73,7 @@ def main():
         print("2. Length unit converter")
         print("3. Consonant counter")
         print("4. Min-Max number finder")
-        print("5. Palindrome checker")
+        print("5. Palindrome checker") 
         print("6. Word counter")
         print("7. Exit")
         
@@ -85,7 +85,7 @@ def main():
                 start  = int (input("enter the start range"))
                 end = int (input("enter the end range"))
                 result = total_sum (start , end)
-                print(f"the prime sum of the range given :{result}")
+                print(f"the prime sum of the  range given :{result}")
                 
               
             except ValueError:
@@ -128,7 +128,7 @@ def main():
             # Word counter
             file_url = input("Enter the URL of the text file: ").strip()
             try:
-                result = word(file_url)
+                result = word_count(file_url)
                 print(f"Word counts: {result}")
             except requests.exceptions.RequestException as e:
                 print(f"Error fetching the file: {e}")
