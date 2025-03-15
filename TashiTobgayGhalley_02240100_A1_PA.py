@@ -2,6 +2,13 @@ import math
 
 # Prime number sum calculator
 def my_prime(x):
+     
+    """
+    Checks if a number is prime.
+    :param x: Integer to check.
+    :return: True if prime, False otherwise.
+    """
+
     if x<= 1:
         return False
     
@@ -11,6 +18,12 @@ def my_prime(x):
     return True
 
 def total_sum (start,end):
+    """
+    Calculates the sum of all prime numbers in a given range.
+    :param start: Starting integer.
+    :param end: Ending integer.
+    :return: Sum of prime numbers.
+    """
     total = 0
     for x in range (start , end + 1):
         if my_prime(x):
@@ -19,6 +32,13 @@ def total_sum (start,end):
 
 # Length unit converter
 def LengthConvert(value, direction):
+    """
+    Converts length between meters and feet.
+    :param value: Numeric value to convert.
+    :param direction: 'M' for meters to feet, 'F' for feet to meters.
+    :return: Converted value rounded to one decimal place or an error message.
+    """
+
     mt_to_ft = 3.28084
     ft_to_mt= 0.3048
     
@@ -32,6 +52,11 @@ def LengthConvert(value, direction):
 
 # Consonant counter
 def ConsonantCount(text):
+    """
+    Counts consonants in a given string.
+    :param text: Input string.
+    :return: Number of consonants.
+    """
   
     vowels = "aeiouAEIOU"
     ConsonantCount = 0
@@ -45,6 +70,11 @@ def ConsonantCount(text):
 
 # Min-Max number Finder
 def MinMaxFinder(num):
+    """
+    Finds the smallest and largest number in a list.
+    :param numbers: List of numerical values.
+    :return: A string showing the smallest and largest number.
+    """
     smallest = min(num)
     largest = max(num)
     return f"Smallest: {smallest}, Largest: {largest}"
@@ -52,6 +82,11 @@ def MinMaxFinder(num):
 
 # Palindrome checker
 def palindrome(text):
+    """
+    Checks if a given text is a palindrome.
+    :param text: Input string.
+    :return: True if palindrome, False otherwise.
+    """
     CleanText = ''.join(text.split()).lower()
     return CleanText == CleanText[::-1]
 
@@ -59,6 +94,11 @@ def palindrome(text):
 import requests
 
 def word_count(text_file_url):
+    """
+    Counts occurrences of specific words in a text file.
+    :param text_file_url: URL of the text file.
+    :return: Dictionary with word counts.
+    """
     response = requests.get(text_file_url)
     text = response.text.lower()
     wlist = ['the', 'was', 'and']
@@ -67,6 +107,9 @@ def word_count(text_file_url):
 
 # Menu and main program flow
 def main():
+    """
+    Main function to execute the program with a menu-driven interface.
+    """
     while True:
         print("\nMenu:")
         print("1. Prime number sum calculator")

@@ -1,6 +1,10 @@
 import random
 
 def guess_number():
+    """
+    Plays a number guessing game where the user tries to guess a randomly chosen number 
+    between 1 and 100. Provides hints if the guess is too high or too low.
+    """
     print("GUESS NUMBER GAME !")
     lower = 1
     upper = 100
@@ -25,6 +29,10 @@ def guess_number():
 
 
 def rock_paper_scissors():
+    """
+    Plays a game of Rock, Paper, Scissors against the computer. The user selects their choice,
+    and the computer randomly selects its choice. The game runs for a specified number of rounds.
+    """
   
     choices = ["rock", "paper", "scissors"]
     print("Welcome to Rock, Paper, Scissors!")
@@ -76,6 +84,10 @@ def rock_paper_scissors():
 
     
 def main ():
+    """
+    The main function providing a menu for the user to select between the Guess Number Game,
+    Rock Paper Scissors Game, or exiting the program.
+    """
     while True:
         print("1 . Guess Number Game !! ")
         print("2 . Rock ,Paper and Scissors Game !! ")
